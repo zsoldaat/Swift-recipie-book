@@ -3,29 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392ED11130EEB1795A574672 /* Pods_mealMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9898AE0270F5BAE9C1A8F3C1 /* Pods_mealMe.framework */; };
+		4C3DC9842460D38600972B15 /* Recipie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC9832460D38600972B15 /* Recipie.swift */; };
+		4C3DC9862460D43E00972B15 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC9852460D43E00972B15 /* Ingredient.swift */; };
 		4C6125F52459C6EE0073595E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6125F42459C6EE0073595E /* AppDelegate.swift */; };
 		4C6125F72459C6EE0073595E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6125F62459C6EE0073595E /* SceneDelegate.swift */; };
-		4C6125F92459C6EE0073595E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6125F82459C6EE0073595E /* ViewController.swift */; };
 		4C6125FC2459C6EE0073595E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6125FA2459C6EE0073595E /* Main.storyboard */; };
-		4C6125FF2459C6EE0073595E /* mealMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C6125FD2459C6EE0073595E /* mealMe.xcdatamodeld */; };
 		4C6126012459C6EF0073595E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6126002459C6EF0073595E /* Assets.xcassets */; };
 		4C6126042459C6EF0073595E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6126022459C6EF0073595E /* LaunchScreen.storyboard */; };
+		4C6126132459CC7A0073595E /* MyRecipiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6126122459CC7A0073595E /* MyRecipiesTableViewController.swift */; };
+		4C6126152459DBCC0073595E /* RecipieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6126142459DBCC0073595E /* RecipieDetailViewController.swift */; };
+		4CA35146245B308B002F7083 /* AddRecipieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA35145245B308B002F7083 /* AddRecipieViewController.swift */; };
+		4CA35148245DD84D002F7083 /* AddRecipieBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA35147245DD84D002F7083 /* AddRecipieBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		108184FD01C7E81F2CC936F4 /* Pods-mealMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealMe.release.xcconfig"; path = "Target Support Files/Pods-mealMe/Pods-mealMe.release.xcconfig"; sourceTree = "<group>"; };
+		4C3DC9832460D38600972B15 /* Recipie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipie.swift; sourceTree = "<group>"; };
+		4C3DC9852460D43E00972B15 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		4C6125F12459C6EE0073595E /* mealMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6125F42459C6EE0073595E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C6125F62459C6EE0073595E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C6125F82459C6EE0073595E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C6125FB2459C6EE0073595E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4C6125FE2459C6EE0073595E /* mealMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mealMe.xcdatamodel; sourceTree = "<group>"; };
 		4C6126002459C6EF0073595E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C6126032459C6EF0073595E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C6126052459C6EF0073595E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C6126122459CC7A0073595E /* MyRecipiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipiesTableViewController.swift; sourceTree = "<group>"; };
+		4C6126142459DBCC0073595E /* RecipieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDetailViewController.swift; sourceTree = "<group>"; };
+		4CA35145245B308B002F7083 /* AddRecipieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipieViewController.swift; sourceTree = "<group>"; };
+		4CA35147245DD84D002F7083 /* AddRecipieBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipieBrain.swift; sourceTree = "<group>"; };
+		9898AE0270F5BAE9C1A8F3C1 /* Pods_mealMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A444DCD34EAD2988F5C9E80 /* Pods-mealMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealMe.debug.xcconfig"; path = "Target Support Files/Pods-mealMe/Pods-mealMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				392ED11130EEB1795A574672 /* Pods_mealMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +57,8 @@
 			children = (
 				4C6125F32459C6EE0073595E /* mealMe */,
 				4C6125F22459C6EE0073595E /* Products */,
+				611D332BDC9839906F3CF5F2 /* Pods */,
+				D7150EC4969F17D4AA94AF7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +75,59 @@
 			children = (
 				4C6125F42459C6EE0073595E /* AppDelegate.swift */,
 				4C6125F62459C6EE0073595E /* SceneDelegate.swift */,
-				4C6125F82459C6EE0073595E /* ViewController.swift */,
-				4C6125FA2459C6EE0073595E /* Main.storyboard */,
+				4C61260D2459CAE60073595E /* Controller */,
+				4C61260C2459CADF0073595E /* View */,
+				4C61260B2459CAD90073595E /* Model */,
 				4C6126002459C6EF0073595E /* Assets.xcassets */,
 				4C6126022459C6EF0073595E /* LaunchScreen.storyboard */,
 				4C6126052459C6EF0073595E /* Info.plist */,
-				4C6125FD2459C6EE0073595E /* mealMe.xcdatamodeld */,
 			);
 			path = mealMe;
+			sourceTree = "<group>";
+		};
+		4C61260B2459CAD90073595E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CA35147245DD84D002F7083 /* AddRecipieBrain.swift */,
+				4C3DC9832460D38600972B15 /* Recipie.swift */,
+				4C3DC9852460D43E00972B15 /* Ingredient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C61260C2459CADF0073595E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C6125FA2459C6EE0073595E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C61260D2459CAE60073595E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C6126122459CC7A0073595E /* MyRecipiesTableViewController.swift */,
+				4C6126142459DBCC0073595E /* RecipieDetailViewController.swift */,
+				4CA35145245B308B002F7083 /* AddRecipieViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		611D332BDC9839906F3CF5F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A444DCD34EAD2988F5C9E80 /* Pods-mealMe.debug.xcconfig */,
+				108184FD01C7E81F2CC936F4 /* Pods-mealMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7150EC4969F17D4AA94AF7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9898AE0270F5BAE9C1A8F3C1 /* Pods_mealMe.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C6126082459C6EF0073595E /* Build configuration list for PBXNativeTarget "mealMe" */;
 			buildPhases = (
+				6A1ACBE7FCCC3A94E73BC19F /* [CP] Check Pods Manifest.lock */,
 				4C6125ED2459C6EE0073595E /* Sources */,
 				4C6125EE2459C6EE0073595E /* Frameworks */,
 				4C6125EF2459C6EE0073595E /* Resources */,
+				F950A7B14AE4FAA0D86BA2A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,13 +198,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A1ACBE7FCCC3A94E73BC19F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mealMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F950A7B14AE4FAA0D86BA2A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealMe/Pods-mealMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealMe/Pods-mealMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mealMe/Pods-mealMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C6125ED2459C6EE0073595E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C6125FF2459C6EE0073595E /* mealMe.xcdatamodeld in Sources */,
-				4C6125F92459C6EE0073595E /* ViewController.swift in Sources */,
+				4CA35146245B308B002F7083 /* AddRecipieViewController.swift in Sources */,
+				4CA35148245DD84D002F7083 /* AddRecipieBrain.swift in Sources */,
+				4C3DC9862460D43E00972B15 /* Ingredient.swift in Sources */,
+				4C3DC9842460D38600972B15 /* Recipie.swift in Sources */,
+				4C6126152459DBCC0073595E /* RecipieDetailViewController.swift in Sources */,
+				4C6126132459CC7A0073595E /* MyRecipiesTableViewController.swift in Sources */,
 				4C6125F52459C6EE0073595E /* AppDelegate.swift in Sources */,
 				4C6125F72459C6EE0073595E /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +394,7 @@
 		};
 		4C6126092459C6EF0073595E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A444DCD34EAD2988F5C9E80 /* Pods-mealMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +413,7 @@
 		};
 		4C61260A2459C6EF0073595E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 108184FD01C7E81F2CC936F4 /* Pods-mealMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,19 +452,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4C6125FD2459C6EE0073595E /* mealMe.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4C6125FE2459C6EE0073595E /* mealMe.xcdatamodel */,
-			);
-			currentVersion = 4C6125FE2459C6EE0073595E /* mealMe.xcdatamodel */;
-			path = mealMe.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4C6125E92459C6EE0073595E /* Project object */;
 }
