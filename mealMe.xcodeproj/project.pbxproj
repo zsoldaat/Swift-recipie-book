@@ -10,7 +10,6 @@
 		392ED11130EEB1795A574672 /* Pods_mealMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9898AE0270F5BAE9C1A8F3C1 /* Pods_mealMe.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4C3DC9842460D38600972B15 /* Recipie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC9832460D38600972B15 /* Recipie.swift */; };
 		4C3DC9862460D43E00972B15 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DC9852460D43E00972B15 /* Ingredient.swift */; };
-		4C5DD36524770ADB00C587E3 /* AutoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DD36424770ADB00C587E3 /* AutoTableView.swift */; };
 		4C5DD3672477199A00C587E3 /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DD3662477199A00C587E3 /* ScrollViewExtension.swift */; };
 		4C6125F52459C6EE0073595E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6125F42459C6EE0073595E /* AppDelegate.swift */; };
 		4C6125F72459C6EE0073595E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6125F62459C6EE0073595E /* SceneDelegate.swift */; };
@@ -19,6 +18,8 @@
 		4C6126042459C6EF0073595E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6126022459C6EF0073595E /* LaunchScreen.storyboard */; };
 		4C6126132459CC7A0073595E /* MyRecipiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6126122459CC7A0073595E /* MyRecipiesTableViewController.swift */; };
 		4C6126152459DBCC0073595E /* RecipieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6126142459DBCC0073595E /* RecipieDetailViewController.swift */; };
+		4C93F2F6247EBE7100F06858 /* IngredientContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93F2F5247EBE7100F06858 /* IngredientContainer.swift */; };
+		4C93F2F8247EEA6300F06858 /* AutoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93F2F7247EEA6300F06858 /* AutoTableView.swift */; };
 		4CA35146245B308B002F7083 /* AddRecipieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA35145245B308B002F7083 /* AddRecipieViewController.swift */; };
 		4CA35148245DD84D002F7083 /* AddRecipieBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA35147245DD84D002F7083 /* AddRecipieBrain.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +28,6 @@
 		108184FD01C7E81F2CC936F4 /* Pods-mealMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealMe.release.xcconfig"; path = "Target Support Files/Pods-mealMe/Pods-mealMe.release.xcconfig"; sourceTree = "<group>"; };
 		4C3DC9832460D38600972B15 /* Recipie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipie.swift; sourceTree = "<group>"; };
 		4C3DC9852460D43E00972B15 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		4C5DD36424770ADB00C587E3 /* AutoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTableView.swift; sourceTree = "<group>"; };
 		4C5DD3662477199A00C587E3 /* ScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExtension.swift; sourceTree = "<group>"; };
 		4C6125F12459C6EE0073595E /* mealMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6125F42459C6EE0073595E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		4C6126052459C6EF0073595E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C6126122459CC7A0073595E /* MyRecipiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipiesTableViewController.swift; sourceTree = "<group>"; };
 		4C6126142459DBCC0073595E /* RecipieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDetailViewController.swift; sourceTree = "<group>"; };
+		4C93F2F5247EBE7100F06858 /* IngredientContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientContainer.swift; sourceTree = "<group>"; };
+		4C93F2F7247EEA6300F06858 /* AutoTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTableView.swift; sourceTree = "<group>"; };
 		4CA35145245B308B002F7083 /* AddRecipieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipieViewController.swift; sourceTree = "<group>"; };
 		4CA35147245DD84D002F7083 /* AddRecipieBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipieBrain.swift; sourceTree = "<group>"; };
 		9898AE0270F5BAE9C1A8F3C1 /* Pods_mealMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				4CA35147245DD84D002F7083 /* AddRecipieBrain.swift */,
 				4C3DC9832460D38600972B15 /* Recipie.swift */,
 				4C3DC9852460D43E00972B15 /* Ingredient.swift */,
+				4C93F2F5247EBE7100F06858 /* IngredientContainer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				4C6125FA2459C6EE0073595E /* Main.storyboard */,
-				4C5DD36424770ADB00C587E3 /* AutoTableView.swift */,
 				4C5DD3662477199A00C587E3 /* ScrollViewExtension.swift */,
+				4C93F2F7247EEA6300F06858 /* AutoTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,11 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C93F2F8247EEA6300F06858 /* AutoTableView.swift in Sources */,
 				4CA35146245B308B002F7083 /* AddRecipieViewController.swift in Sources */,
-				4C5DD36524770ADB00C587E3 /* AutoTableView.swift in Sources */,
 				4CA35148245DD84D002F7083 /* AddRecipieBrain.swift in Sources */,
 				4C3DC9862460D43E00972B15 /* Ingredient.swift in Sources */,
 				4C3DC9842460D38600972B15 /* Recipie.swift in Sources */,
+				4C93F2F6247EBE7100F06858 /* IngredientContainer.swift in Sources */,
 				4C6126152459DBCC0073595E /* RecipieDetailViewController.swift in Sources */,
 				4C6126132459CC7A0073595E /* MyRecipiesTableViewController.swift in Sources */,
 				4C6125F52459C6EE0073595E /* AppDelegate.swift in Sources */,

@@ -9,12 +9,22 @@
 import UIKit
 
 extension UIScrollView {
-
-    func scrollToBottom(additionalOffset: CGFloat) {
+    
+    func scrollUp(tableView: UITableView, visibleIngredients: Int = 1) {
         
-        //This additional offset parameter is needed because the scrolling behaviour is affected by the tableview's header. The value returned should be a multiple of the table's row height. 
+        let additionalOffset = CGFloat(visibleIngredients)*tableView.rowHeight
+
+        let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.size.height + contentInset.bottom - additionalOffset)
+        setContentOffset(bottomOffset, animated: true)
+    }
+    
+    func scrollDown(tableView: UITableView, visibleIngredients: Int = 1) {
+        
+        let additionalOffset = CGFloat(visibleIngredients)*tableView.rowHeight
         
         let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.size.height + contentInset.bottom + additionalOffset)
         setContentOffset(bottomOffset, animated: true)
     }
+    
+    
 }

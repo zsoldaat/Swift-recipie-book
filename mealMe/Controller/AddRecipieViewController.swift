@@ -15,16 +15,12 @@ class AddRecipieViewController: UIViewController{
     
     let realm = try! Realm()
     
-    var newRecipie: Recipie?
-    var ingredientArray = [Ingredient]()
-    var hiddenIngredientArray = [Ingredient]()
+    var ingredientContainer = IngredientContainer()
     var addRecipieBrain = AddRecipieBrain()
     
-    let pickerViewOptions = ["1/4","1/3", "1/2", "1", "2", "3", "4"]
+    let pickerViewOptions = ["1/16", "1/8", "1/4","1/3", "1/2", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let mealTypes = ["Breakfast", "Lunch", "Dinner"]
     var pickerViewSelectedValue: String = "1"
-    
-    var ingredientsTableIsOpen = true
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var ingredientTableView: UITableView!
@@ -44,16 +40,14 @@ class AddRecipieViewController: UIViewController{
         
         pickerView.dataSource = self
         pickerView.delegate = self
-        pickerView.selectRow(3, inComponent: 0, animated: false)
+        pickerView.selectRow(5, inComponent: 0, animated: false)
         addIngredientsTextField.delegate = self
         
         IQKeyboardManager.shared().isEnableAutoToolbar = false
         
         self.hideKeyboardWhenTappedAround()
         
-        for i in 0...2 {
-            mealType.setTitle(mealTypes[i], forSegmentAt: i)
-        }
+        setMealTypeLabels()
         
         // Do any additional setup after loading the view.
     }
@@ -65,6 +59,7 @@ class AddRecipieViewController: UIViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //Locks the instructionsTextView to it's size upon loading
         let currentHeight = instructionsTextView.frame.height
         instructionsTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: currentHeight).isActive = true
     }
@@ -75,36 +70,27 @@ class AddRecipieViewController: UIViewController{
     
     
     @IBAction func doneButton(_ sender: UIButton) {
-        if (ingredientArray.count > 0 || hiddenIngredientArray.count > 0) && recipeNameTextField.text != ""{
-            if let safeRecipieName = recipeNameTextField.text {
-                newRecipie = Recipie()
-                newRecipie?.recipieName = safeRecipieName
-                newRecipie?.mealType = mealTypes[mealType.selectedSegmentIndex]
-                newRecipie?.preference = preferenceSlider.value
-                
-                
-                if ingredientsTableIsOpen == false {
-                    ingredientArray = hiddenIngredientArray
-                }
-                
-                for ingredient in ingredientArray {
-                    newRecipie?.ingredients.append(ingredient)
-                }
-                
-                if let safeInstructions = instructionsTextView.text {
-                    newRecipie?.instructions = safeInstructions
-                }
-                
-                navigationController?.popViewController(animated: true)
-                
-                do {
-                    try realm.write {
-                        realm.add(newRecipie!)
-                    }
-                } catch {
-                    
-                }
+        if ingredientContainer.hasIngredients && recipeNameTextField.text != ""{
+            let newRecipie = Recipie()
+            newRecipie.recipieName = recipeNameTextField.text!
+            newRecipie.mealType = mealTypes[mealType.selectedSegmentIndex]
+            newRecipie.preference = preferenceSlider.value
+            newRecipie.instructions = instructionsTextView.text ?? ""
+            
+            for ingredient in ingredientContainer.getIngredients() {
+                newRecipie.ingredients.append(ingredient)
             }
+            
+            do {
+                try realm.write {
+                    realm.add(newRecipie)
+                }
+            } catch {
+                print("Error writing data to local storage: \(error)")
+            }
+            
+            navigationController?.popViewController(animated: true)
+            
         } else {
             let alert = UIAlertController(title: "Make sure your recipie has ingredients and a name.", message: "", preferredStyle: .alert)
             
@@ -115,18 +101,21 @@ class AddRecipieViewController: UIViewController{
             alert.addAction(action)
             present(alert, animated: true)
         }
-        
     }
     
-    
-    
-    
     func updateTableViewSize() {
+        
         DispatchQueue.main.async {
             self.ingredientTableViewHeightContraint.constant = self.ingredientTableView.contentSize.height
             self.view.layoutIfNeeded()
         }
         ingredientTableView.reloadData()
+    }
+    
+    func setMealTypeLabels() {
+        for i in 0...2 {
+            mealType.setTitle(mealTypes[i], forSegmentAt: i)
+        }
     }
     
     func addIngredientToTable() {
@@ -136,15 +125,13 @@ class AddRecipieViewController: UIViewController{
             newIngredient.ingredientName = addIngredientsTextField.text!
             newIngredient.ammount = addRecipieBrain.ingredientStringtoDouble(string: pickerViewSelectedValue)
             
-            pickerView.selectRow(3, inComponent: 0, animated: true)
+            pickerView.selectRow(pickerViewOptions.firstIndex(of: "1")!, inComponent: 0, animated: true)
             pickerViewSelectedValue = "1"
-
-            if ingredientsTableIsOpen == true {
-                ingredientArray.append(newIngredient)
-                scrollView.scrollToBottom(additionalOffset: ingredientTableView.rowHeight)
-            } else {
-                hiddenIngredientArray.append(newIngredient)
+            
+            if ingredientContainer.isOpen {
+                scrollView.scrollDown(tableView: ingredientTableView)
             }
+            ingredientContainer.addIngredient(newIngredient)
             
             addIngredientsTextField.text = ""
             updateTableViewSize()
@@ -178,41 +165,33 @@ extension AddRecipieViewController: UITableViewDataSource, UITableViewDelegate {
         return button
     }
     
-    
     @objc func openClose() {
-        if ingredientsTableIsOpen == true {
-            
-            scrollView.scrollToBottom(additionalOffset: -(CGFloat(ingredientArray.count*50)))
-            self.hiddenIngredientArray = self.ingredientArray
-            self.ingredientArray.removeAll()
-            
-        } else if ingredientsTableIsOpen == false {
-            ingredientArray = hiddenIngredientArray
-            hiddenIngredientArray.removeAll()
-            scrollView.scrollToBottom(additionalOffset:CGFloat(ingredientArray.count)*ingredientTableView.rowHeight)
-            self.updateTableViewSize()
-            
+        if ingredientContainer.isOpen {
+            scrollView.scrollUp(tableView: ingredientTableView, visibleIngredients: ingredientContainer.ingredientArray.count)
+            self.ingredientContainer.close()
+
+        } else if !ingredientContainer.isOpen{
+            ingredientContainer.open()
+            //reload data here so scrollDown has accurate info to work with
+            ingredientTableView.reloadData()
+            scrollView.scrollDown(tableView: ingredientTableView, visibleIngredients: ingredientContainer.ingredientArray.count)
         }
+        
+        //The 0.25 is to wait for the closing animation before abruptly changing the tableview size. Could be reworked
         DispatchQueue.main.asyncAfter(deadline: .now()+0.25) {
             self.updateTableViewSize()
         }
-        ingredientsTableIsOpen = !ingredientsTableIsOpen
-
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ingredientArray.count
+        return ingredientContainer.ingredientArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddRecipieCell", for: indexPath)
         
-        cell.textLabel?.text = ingredientArray[indexPath.row].ingredientName
-        cell.detailTextLabel?.text = String(ingredientArray[indexPath.row].ammount)
+        cell.textLabel?.text = ingredientContainer.ingredientArray[indexPath.row].ingredientName
+        cell.detailTextLabel?.text = String(Int(ingredientContainer.ingredientArray[indexPath.row].ammount))
         
         return cell
     }
