@@ -6,4 +6,6 @@ The units of the ingredients are meant to be open-ended so you can do what makes
 
 Here is a demo of the app in action: https://youtu.be/MwDBgBIHgg8
 
-Future plans for this app include an entire re-write using SwiftUI, and improvements to the algorithm so that it will suggest recipies combiniations that include whole numbers for ingredients i.e. if one recipie on your grocery list calls for half an onion, it will try to suggest another recipie that calls for half an onion. 
+Future plans for this app include an entire re-write using SwiftUI, and improvements to the algorithm so that it will suggest recipies combiniations that include whole numbers for ingredients i.e. if one recipie on your grocery list calls for half an onion, it will try to suggest another recipie that calls for half an onion.
+
+Please excuse the awful colour palette, I'm not a designer by any means!
